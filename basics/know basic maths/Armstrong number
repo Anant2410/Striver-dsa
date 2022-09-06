@@ -1,0 +1,11 @@
+string armstrongNumber(int n){
+        int ans= n;
+        int sum = 0;
+        while(n!=0){
+            int rem = n%10;
+            sum += pow(rem,3);
+            n /= 10;
+        }
+        if(sum==ans) return "Yes";
+        return "No";
+    }
