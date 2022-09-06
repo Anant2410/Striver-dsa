@@ -1,0 +1,14 @@
+	string is_palindrome(int n)
+		{
+		    long long temp = n;
+		    if(n<0) return "No";
+		    long long ans=0;
+		    while(n!=0){
+		        int rem = n % 10;
+		        ans = ans*10 + rem;
+		        n /= 10;
+		    }
+		    if(ans==temp) return "Yes";
+		    
+		    return "No";
+		}
