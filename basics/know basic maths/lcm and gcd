@@ -1,0 +1,18 @@
+long long gcd(long long a, long long b){
+        if(a==0) return b;
+        if(b==0) return a;
+        
+        while(a!=b){
+            if(a>b) a = a-b;
+            else b = b-a;
+        }
+        return a;
+    }
+    vector<long long> lcmAndGcd(long long A , long long B) {
+        long long ans1 = gcd(A,B);
+        long long ans2 = (A*B) / ans1;
+        vector<long long> ans;
+        ans.push_back(ans2);
+        ans.push_back(ans1);
+        return ans;
+    }
