@@ -1,0 +1,5 @@
+long long reversedBits(long long x) {
+         string str = bitset<32>(x).to_string();
+        reverse(str.begin(),str.end());
+        return stoll(str, 0, 2);
+    }
