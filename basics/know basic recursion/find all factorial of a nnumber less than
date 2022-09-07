@@ -1,0 +1,16 @@
+vector<long long> factorialNumbers(long long n)
+    {
+        vector<long long> ans;
+        long long temp = 1;
+        
+        for(int i=1;i<=n;i++){
+            temp *= i;
+            if(temp==n){
+                ans.push_back(temp);
+                return ans;
+            }
+            if(temp>n) return ans;
+            
+            ans.push_back(temp);
+        }
+    }
