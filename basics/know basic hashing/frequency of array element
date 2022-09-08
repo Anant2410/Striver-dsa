@@ -1,0 +1,15 @@
+void frequencyCount(vector<int>& arr,int N, int P)
+    { 
+        unordered_map<int,int> mp;
+        for(auto it: arr){
+            mp[it]++;
+        }
+        for(int i=0;i<N;i++){
+            if(mp[i+1]){
+                arr[i] = mp[i+1];
+            }
+            else{
+                arr[i] = 0;
+            }
+        }
+    }
