@@ -11,3 +11,20 @@ int majorityElement(vector<int>& nums) {
         }
         return ans;
     }
+    
+    
+    //gfg
+    int majorityElement(int a[], int size)
+    {
+        map<int,int>mp;
+        for(int i=0;i<size;i++){
+            mp[a[i]]++;
+        }
+    int ans=-1;
+        
+    for (auto x: mp) {
+    if (x.second > (size /2))
+      ans=x.first;
+  }
+return ans;
+    }
