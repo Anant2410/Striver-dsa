@@ -1,0 +1,43 @@
+int closest3Sum(int arr[], int n, int tar)
+    {
+        sort(arr,arr+n);
+        int diff = 1e9;
+        int ans;
+        for(int i=0;i<n-2;i++)
+        {
+            int res = tar- arr[i];
+            int l = i+1,h = n-1;
+            while(l<h)
+            {
+                int sum = arr[l] + arr[h];
+                
+                if(sum == res)
+                {
+                    return tar;
+                }
+                else if(abs(sum-res) < diff)
+                {
+                    if(sum-res >0)
+                    {
+                        diff = sum - res;
+                    }
+                    else
+                    {
+                        diff = res - sum;
+                    }
+                    ans = sum + arr[i];
+                }
+                if(sum > res) h--;
+                else l++;
+            }
+        }
+        return ans;
+    }
+    
+    
+    
+    
+    
+    
+    // leetcode//
+    
