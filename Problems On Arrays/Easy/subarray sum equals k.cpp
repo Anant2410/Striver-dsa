@@ -15,7 +15,7 @@ int subarraySum(vector<int>& nums, int k) {
         return ans;
     }
     
-    /* gfg
+    / gfg
     
     int lenOfLongSubarr(int A[],  int N, int k) 
     { 
