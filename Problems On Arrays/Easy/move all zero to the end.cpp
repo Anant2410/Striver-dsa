@@ -22,6 +22,9 @@ void pushZerosToEnd(int arr[], int n) {
 	        arr[i] = temp[i];
 	    }
 	}
+
+
+
 	o(1) solution :- 
 	void pushZerosToEnd(int arr[], int n) {
 	    int st = 0;
