@@ -26,3 +26,15 @@ void insert(stack<int>& st, int num)
         rec(st);
         return st;
     }
+    
+    /// iteerative ///
+stack<int> Reverse(stack<int> st){
+        stack<int>st2;
+        while(!st.empty())
+        {
+            int x = st.top();
+            st.pop();
+            st2.push(x);
+        }
+        return st2;
+    }
