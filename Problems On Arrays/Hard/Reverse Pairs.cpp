@@ -1,3 +1,5 @@
+// simple merge sort lgani hai isme aur bass compare krna hai nums[i] > 2 * nums[j] //
+
 int merge(vector<int>& nums, int l, int m, int h)
     {
         int i = l, j = m+1;
