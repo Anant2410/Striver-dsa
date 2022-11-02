@@ -1,3 +1,6 @@
+// har ek element ko map me dalenge aur phir length me se most frequent element ko minus karenge ((j-i+1) - maxi) kuch aese //
+// agar ye >k hai to jabtak hai tabtak remove krdo//
+
 class Solution {
 public:
     int characterReplacement(string s, int k) {
