@@ -1,10 +1,12 @@
+// agar k ki value 2nd array se jayada hogyi//
+
 int kthElement(int arr1[], int arr2[], int n, int m, int k)
     {
         if(m<n)
         {
             return kthElement(arr2,arr1,m,n,k);
         }
-        int low = max(0,k-m) , high = min(k,n);
+        int low = max(0,k-m) , high = min(k,n); 
         
         while(low<=high)
         {
