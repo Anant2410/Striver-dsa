@@ -1,3 +1,5 @@
+// agar student 1 hai to answer = sum of all elements aur agar students == number of elements then student has minimum number of pages//
+
 bool allocation(int arr[] , int number, int student, int n)
     {
         int stu = 1,pages = 0;
