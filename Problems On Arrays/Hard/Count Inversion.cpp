@@ -1,3 +1,5 @@
+// simple merge sort hai ye bass jab nums[i] > nums[j] se to ans me n1-i ko add krna hai  //
+
 long long int countandMerge(long long arr[], long long l, long long m, long long h){
        long long n1=m-l+1,n2=h-m;
        long long left[n1], right[n2];
