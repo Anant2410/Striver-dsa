@@ -1,3 +1,5 @@
+// gap ko half krna hai//
+
 class Solution {
 public:
     int f(int gap)
@@ -25,7 +27,7 @@ public:
         }
         if(j<m)
         {
-             for(j=0;j+gap<n;j++)
+             for(j=0;j+gap<m;j++)
             {
                 if(nums2[j] > nums2[j+gap])
                     swap(nums2[j], nums2[j+gap]);
