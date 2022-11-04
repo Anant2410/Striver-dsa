@@ -1,3 +1,5 @@
+// agar size k se bda hojaye to top elemet ko ans me push karna hai //
+
 vector <int> nearlySorted(int arr[], int num, int K){
         vector<int> ans;
         priority_queue<int, vector<int>, greater<int>> minh;
