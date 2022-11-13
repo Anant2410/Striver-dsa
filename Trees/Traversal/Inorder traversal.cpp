@@ -13,6 +13,36 @@ void f(Node* root, vector<int>& ans)
         return ans;
     }
 
+
+
+// iterative usinng 1 stack//\
+vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> ans;
+        if(root==NULL)
+        {
+            return ans;
+        }
+        stack<TreeNode*> st;
+        TreeNode* node = root;
+        while(true)
+        {
+            if(node!=NULL)
+            {
+                st.push(node);
+                node = node->left;
+            }
+            else
+            {
+                if(st.empty()) break;
+                TreeNode* x = st.top();
+                st.pop();
+                ans.push_back(x->val);
+                node = x->right;
+            }
+        }
+        return ans;
+    }
+
 //iterative//
 
 vector<int> inorderTraversal(TreeNode* root) {
