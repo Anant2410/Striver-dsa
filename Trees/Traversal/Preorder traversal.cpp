@@ -15,6 +15,30 @@ vector <int> preorder(Node* root)
     return ans;
 }
 
+// iterative using stack//
+vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> ans;
+        if(root==NULL) return ans;
+        stack<TreeNode*> st;
+        st.push(root);
+        while(!st.empty())
+        {
+            TreeNode* x = st.top();
+            st.pop();
+            ans.push_back(x->val);
+            if(x->right!=NULL)
+            {
+                st.push(x->right);
+            }
+            if(x->left!=NULL)
+            {
+                st.push(x->left);
+            }
+        }
+        return ans;
+    }
+
+
 // iterative//
 class Solution {
 public:
