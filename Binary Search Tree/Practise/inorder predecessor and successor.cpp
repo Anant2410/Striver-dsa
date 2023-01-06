@@ -1,30 +1,53 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    TreeNode* fun(vector<int>& preorder,int & i, int bound)
-    {
-        if(i==preorder.size() || preorder[i] > bound)
-        {
-            return NULL;
+void findPreSuc(Node* root, Node*& pre, Node*& suc, int key)
+
+{
+
+ 
+
+// Your code goes here
+
+    pre=NULL;
+
+    suc=NULL;
+
+    Node * temp = root;
+
+    while(temp!= NULL){
+
+        if(temp->key>key){
+
+            suc= temp ;
+
+            temp=temp->left;
+
         }
-        TreeNode* root = new TreeNode(preorder[i]);
-        i++;
-        root->left = fun(preorder,i,root->val);
-        root->right = fun(preorder,i,bound);
-        return root;
+
+        else{
+
+            temp= temp->right ;
+
+        }
+
     }
-    TreeNode* bstFromPreorder(vector<int>& preorder) {
-        int i=0;
-        return fun(preorder,i,INT_MAX);
+
+    Node * tip= root;
+
+    while(tip!= NULL){
+
+        if(tip->key<key){
+
+            pre= tip ;
+
+            tip=tip->right;
+
+        }
+
+        else{
+
+            tip= tip->left ;
+
+        }
+
     }
-};
+
+}
