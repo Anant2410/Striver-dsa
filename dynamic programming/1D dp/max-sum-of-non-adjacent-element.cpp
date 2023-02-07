@@ -39,3 +39,21 @@ int findMaxSum(int *arr, int n) {
 	    }
 	    return dp[n-1];
 	}
+
+//space optimization
+int prev = arr[0];
+        int prev2 = -1;
+        for(int i=1;i<n;i++)
+        {
+            int pick = arr[i];
+            if(i>1)
+            {
+                pick += prev2;
+            }
+            int notpick = 0 + prev;
+            
+            int curi = max(pick,notpick);
+            prev2 = prev;
+            prev = curi;
+        }
+        return prev;
