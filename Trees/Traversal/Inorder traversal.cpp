@@ -44,26 +44,31 @@ vector<int> inorderTraversal(TreeNode* root) {
     }
 
 //iterative//
-
+//morris traversal
 vector<int> inorderTraversal(TreeNode* root) {
         vector<int> ans;
         TreeNode* curr=root;
         TreeNode* prev;
         
         while(curr!=NULL){
+            //case 1 when the left child is null simply  add it to vector  and move right//
             if(curr->left==NULL){
                 ans.push_back(curr->val);
                 curr = curr->right;
             }
             else{
+                //else make a threaded binary tree
                 prev = curr->left;
+                //go to the rightest part of the left subtree
                 while(prev->right && prev->right != curr){
                     prev = prev->right;
                 }
+                //if it is not connected then connect them and move to left
                 if(prev->right==NULL){
                     prev->right = curr;
                     curr = curr->left;
                 }
+                //else mark it as null and move to right
                 else{
                     prev->right=NULL;
                     ans.push_back(curr->val);
